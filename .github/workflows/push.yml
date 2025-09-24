@@ -18,7 +18,7 @@ jobs:
       uses: docker/setup-buildx-action@v2
 
     - name: Run tests
-      run: ls -a && cd app && make ci
+      run: ls && cd app && make ci
 
   build-and-push:
     name: Build and Push Docker image
