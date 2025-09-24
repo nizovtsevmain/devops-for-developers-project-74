@@ -2,7 +2,6 @@ services:
   app:
     build:
       context: .
-      dockerfile: Dockerfile
-    volumes:
-      - ./app:/app
+      dockerfile: Dockerfile.production
+    image: nizovtsevi/devops-for-developers-project-74:latest
     command: ["make", "test"]
