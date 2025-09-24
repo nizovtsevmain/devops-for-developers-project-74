@@ -24,7 +24,7 @@ jobs:
         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
     - name: Run tests
-      run: make ci
+      run: cd app && make ci
 
   build-and-push:
     name: Build and Push Docker image
