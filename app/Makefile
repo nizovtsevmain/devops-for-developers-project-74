@@ -34,4 +34,4 @@ test:
 	NODE_ENV=test npm test -s
 
 ci:
-	ls -a && docker-compose -f docker-compose.yml up --abort-on-container-exit --exit-code-from app
+	cd .. && docker-compose -f docker-compose.yml up --abort-on-container-exit --exit-code-from app
