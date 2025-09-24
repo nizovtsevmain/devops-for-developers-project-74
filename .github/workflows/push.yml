@@ -18,11 +18,11 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
-    - name: Set up Docker Buildx
-      uses: docker/setup-buildx-action@v2
-
+    - name: Set up Docker Compose
+      uses: isbang/compose-action@v1.4.1
+    
     - name: Run tests
-      run: make ci
+      run: docker-compose run --rm app make test
 
   build-and-push:
     name: Build and Push Docker image
