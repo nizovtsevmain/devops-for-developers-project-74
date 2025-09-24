@@ -9,6 +9,10 @@ jobs:
   test:
     name: Run Tests
     runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: app
     
     steps:
     - name: Checkout code
@@ -18,7 +22,7 @@ jobs:
       uses: docker/setup-buildx-action@v2
 
     - name: Run tests
-      run: ls && cd app && make ci
+      run: make ci
 
   build-and-push:
     name: Build and Push Docker image
